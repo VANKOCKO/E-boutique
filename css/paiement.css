@@ -1,0 +1,411 @@
+@import url('../css/font.css');
+
+:root {
+    --bs-blue: #007bff;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #e83e8c;
+    --bs-red: #d9534f;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #f0ad4e;
+    --bs-green: #4bbf73;
+    --bs-teal: #20c997;
+    --bs-cyan: #1f9bcf;
+    --bs-white: #fff;
+    --bs-gray: #919aa1;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #1a1a1a;
+    --bs-secondary: #fff;
+    --bs-success: #4bbf73;
+    --bs-info: #1f9bcf;
+    --bs-warning: #f0ad4e;
+    --bs-danger: #d9534f;
+    --bs-light: #fff;
+    --bs-dark: #343a40;
+    --bs-font-sans-serif: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: var(--bs-font-sans-serif);
+    color: #55595c;
+}
+
+header {
+    background-color: black;
+    display: flex !important;
+    width: 100%;
+}
+
+#logo {
+    width: 170px;
+}
+
+nav div {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav {
+    margin: auto;
+}
+
+nav div p {
+    font-size: 12px;
+    padding-left: 10px;
+    color: white;
+}
+
+progress {
+    background: green;
+    display: flex;
+    width: 600px;
+    height: 12px;
+}
+
+progress:after{
+    background-color: white;
+    content: '';
+    display: block;
+    width: 50%;
+    height: 100%;
+}
+
+#retour {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+#radio{
+    display: flex;
+    align-items: center;
+}
+
+#radio input{
+    margin-right: 1%;
+}
+
+#radio label{
+    margin-top: 5px;
+    font-weight: 700;
+    width: 500px;
+}
+
+.ibancaire{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1%;
+}
+
+i{
+    margin: auto;
+}
+
+#imgbancaire{
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+}
+
+#imgbancaire img{
+    width: 15%;
+}
+
+#paypal{
+    width: 10% !important;
+}
+
+.ibancaire div{
+    width: 100%;
+}
+
+#info{
+    width: 100px;
+    border: 1px solid #e4e1e1;
+    padding-left: 19px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}
+
+#alert {
+    color: #82322f;
+    background-color: #f7dddc;
+    border-color: #f4cbca;
+    padding: 1rem 1rem;
+}
+
+ul {
+    margin-left: 30px;
+}
+
+#couleur-success {
+    color: #2d7345;
+    background-color: #dbf2e3;
+    border-color: #c9ecd5;
+    padding: 1rem 1rem;
+    margin: 1%;
+}
+
+#couleur-danger {
+    color: #82322f;
+    background-color: #f7dddc;
+    border-color: #f4cbca;
+    padding: 1rem 1rem;
+    margin: 1%;
+}
+
+#s1 {
+    display: flex;
+    align-items: center;
+    background-image: url('../img/_font.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    margin-left: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+h2{
+    font-size: 15px !important;
+    margin-bottom: 10px;
+}
+
+.expfac{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    border: 1px solid #e4e1e1;
+}
+
+.expfac div{
+    display: flex;
+    flex-direction: column;
+}
+
+.expfac i{
+    margin: 0;
+}
+
+#totalttcexpfac{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+#s2 {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 350px;
+}
+
+#s2 p{
+    font-size: 13px;
+}
+
+#ia {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1%;
+}
+
+.s {
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 150px;
+    padding: 2%;
+    height: auto;
+    width: 60%;
+    margin-top: 0;
+    border: 1px solid #e4e1e1;
+}
+
+.s a{
+    margin-left: 550px;
+}
+
+label{
+    font-size: 13px;
+    margin-bottom: 1%;
+}
+
+small{
+    font-size: 10px;
+}
+
+.ds {
+    font-size: 13px;
+}
+
+#mail {
+    margin-bottom: 19px;
+}
+
+#mdp {
+    color: #1F9BCF;
+}
+
+.cgucgv{
+    font-size: 10px !important;
+    margin-bottom: 15px;
+}
+
+#ci {
+    display: flex;
+    justify-content: center;
+}
+
+#ci a {
+    display: block;
+    margin: auto;
+    text-align: center;
+    border: 1px solid rgb(228, 225, 225);
+    text-decoration: none;
+    padding: 1rem 1rem;
+    margin: 2%;
+    margin-bottom: 1%;
+    margin-right: 0;
+    width: 150px;
+}
+
+#ci a:hover {
+    color: black !important;
+}
+
+h5 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.d {
+    display: flex;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 2%;
+    border: 1px solid rgb(228, 225, 225);
+}
+
+.s .i {
+    border: 0 solid #ced4da;
+    font-size: 13px;
+    outline-style: none;
+    padding-left: 10px;
+    padding-top: 5px;
+    width: 100%;
+}
+
+#check {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+#check input {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#tel{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#tel input{
+    width: 100%;
+}
+
+#tel i{
+    align-items: none;
+    margin: 0;
+    width: 10px;
+}
+
+#tel p{
+    padding-left: 5px;
+}
+
+#indicatif{
+    box-shadow: none;
+    border: solid 1px rgb(173, 172, 172);
+}
+
+#cgu {
+    font-size: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+#totalttc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 400px;
+}
+
+#totalttc strong {
+    color: #4bbf73;
+    font-size: 30px;
+}
+
+#totalttc p {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    box-shadow: 20px;
+    background: #4bbf73;
+    box-shadow: 0 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 13px !important;
+    text-transform: uppercase !important;
+    width: 200px;
+}
+
+.c{
+    margin-left: 550px;
+}
+
+button:hover {
+    background: #409e61;
+
+}
+
+p{
+    margin-bottom: 0 !important;
+}

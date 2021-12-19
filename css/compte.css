@@ -1,0 +1,220 @@
+@import url('../css/font.css');
+
+:root {
+    --bs-blue: #007bff;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #e83e8c;
+    --bs-red: #d9534f;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #f0ad4e;
+    --bs-green: #4bbf73;
+    --bs-teal: #20c997;
+    --bs-cyan: #1f9bcf;
+    --bs-white: #fff;
+    --bs-gray: #919aa1;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #1a1a1a;
+    --bs-secondary: #fff;
+    --bs-success: #4bbf73;
+    --bs-info: #1f9bcf;
+    --bs-warning: #f0ad4e;
+    --bs-danger: #d9534f;
+    --bs-light: #fff;
+    --bs-dark: #343a40;
+    --bs-font-sans-serif: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: var(--bs-font-sans-serif);
+    color: #55595c;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#logo {
+    width: 170px;
+}
+
+#couleur-success {
+    color: #2d7345;
+    background-color: #dbf2e3;
+    border-color: #c9ecd5;
+    padding: 1rem 1rem;
+    margin: 1%;
+}
+
+#couleur-danger {
+    color: #82322f;
+    background-color: #f7dddc;
+    border-color: #f4cbca;
+    padding: 1rem 1rem;
+    margin: 1%;
+}
+
+#session {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+#session i {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+#a1 {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#s1 {
+    background-image: url('../img/compte_font.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 4%;
+}
+
+h1 {
+    padding-top: 30px;
+    font-size: 20px;
+    margin: 1%;
+}
+
+h2 {
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+#mail {
+    padding-bottom: 20px;
+}
+
+#mdp {
+    color: #1F9BCF;
+    font-size: 13px;
+}
+
+#s2 {
+    display: flex;
+    align-items: center;
+}
+
+#s2 a{
+    font-size: 13px;
+}
+
+.d {
+    border: 1px solid rgb(228, 225, 225);
+    padding: 1rem 1rem;
+    width: 200px;
+    margin: 1%;
+}
+
+.d a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+
+#logout {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+#s3 p {
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: auto;
+    background: #d9534f;
+    padding: 10px 40px;
+    border: none;
+    width: 250px;
+}
+
+button:hover {
+    background: #c44c48;
+}
+
+button a {
+    text-transform: uppercase;
+    font-family: inherit;
+    color: white;
+    text-decoration: none;
+}
+
+#ia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.s {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    border: 1px solid rgb(228, 225, 225);
+    padding: 2%;
+    margin-bottom: 1%;
+    width: 48%;
+}
+
+.s p{
+    font-size: 13px;
+}
+
+#s3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 1%;
+    margin-bottom: 100px;
+    padding: 1%;
+    border: 1px solid rgb(228, 225, 225);
+    height: 250px;
+}
+
+#s3 img {
+    width: 80px;
+    display: block;
+    margin: auto;
+}
+
+footer {
+    background: black;
+    padding: 0.5%;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
+
+footer a {
+    color: white;
+}

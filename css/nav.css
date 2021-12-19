@@ -1,0 +1,140 @@
+header {
+    background-color: black;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+#logo {
+    width: 170px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 0.5%;
+    width: 100%;
+}
+
+#accueil,
+#eboutique,
+#seconnecter,
+#panier,
+#contact {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+}
+
+nav div:hover {
+    transition: color 1s;
+    color: white !important;
+}
+
+a:hover {
+    transition: color 1s;
+    color: white !important;
+}
+
+#accueil,
+#a1 {
+    color: white;
+}
+
+div i {
+    font-size: 20px;
+    text-align: center
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.55);
+    ;
+}
+
+#searchbar {
+    display: flex;
+    justify-content: center;
+    flex-direction: row !important;
+    background: white;
+    margin-right: 0.5%;
+    margin-top: 1.5%;
+    height: 40px;
+    width: 500px;
+}
+
+input {
+    border: none;
+    height: 40px;
+    width: 400px;
+    outline-style: none;
+    padding-left: 10px;
+}
+
+#loupe {
+    padding-right: 10px;
+    color: black;
+}
+
+/* iPads */
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    a {
+        padding-left: 10px;
+    }
+
+    i {
+        padding-bottom: -50px !important;
+    }
+
+    #searchbar {
+        margin-left: 10px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: 750px;
+    }
+
+    input {
+        padding-left: 700px;
+    }
+}
+
+/* Smartphones */
+@media screen and (min-width : 320px) and (max-width : 480px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    a {
+        padding-left: 10px;
+    }
+
+    i {
+        padding-bottom: -50px !important;
+    }
+
+    #searchbar {
+        margin-left: 7px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: 400px;
+    }
+}

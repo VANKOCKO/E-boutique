@@ -1,0 +1,66 @@
+
+session_start();
+error_reporting(E_ALL);
+require 'functions.php';
+
+// On récupère les informations du formulaire method="post"
+if (isset($_POST['livraison'])) {
+    if (
+        isset($_POST['prenom']) && !empty($_POST['prenom'])
+        && isset($_POST['nom']) && !empty($_POST['nom'])
+        && isset($_POST['societe']) && !empty($_POST['societe'])
+        && isset($_POST['complement_adresse']) && !empty($_POST['complement_adresse'])
+        && isset($_POST['ville']) && !empty($_POST['ville'])
+        && isset($_POST['cp']) && !empty($_POST['cp'])
+        && isset($_POST['pays']) && !empty($_POST['pays'])
+        && isset($_POST['tel']) && !empty($_POST['tel'])
+        && isset($_POST['id_client']) && !empty($_POST['id_client'])
+    ) {
+
+        // On inclut la connexion à la base
+        require_once('../connexion.php');
+
+        // On nettoie les données
+        $prenom = strip_tags($_POST['prenom']);
+        $nom = strip_tags($_POST['nom']);
+        $societe = strip_tags($_POST['societe']);
+        $complement_adresse = strip_tags($_POST['complement_adresse']);
+        $ville = strip_tags($_POST['ville']);
+        $cp = strip_tags($_POST['cp']);
+        $pays = strip_tags($_POST['pays']);
+        $tel = strip_tags($_POST['tel']);
+        $id_client = strip_tags($_POST['id_client']);
+
+        // On prépare la requête
+        $sth = $bdd->prepare("INSERT INTO adresse_livraison(prenom,nom,societe,adresse,complement_adresse,ville,cp,pays,tel,id_client) VALUES (:prenom,:nom,:societe,:adresse,:complement_adresse,:ville,:cp,:pays,:tel,:id_client)");
+
+        // On accroche les paramètres
+        $sth->bindValue(':prenom', $prenom);
+        $sth->bindValue(':nom', $nom);
+        $sth->bindValue(':societe', $societe);
+        $sth->bindValue(':complement_adresse', $complement_adresse);
+        $sth->bindValue(':ville', $ville);
+        $sth->bindValue(':cp', $cp);
+        $sth->bindValue(':pays', $pays);
+        $sth->bindValue(':tel', $tel);
+        $sth->bindValue(':id_client', $id_client);
+
+        // On execute la requête
+        $sth->execute();
+
+        // On envoie un message de confirmation
+        $_SESSION['flash']['success'] = 'Votre adresse de livraison a bien été enregistré';
+
+        // On déconnecte la connexion à la base
+        require_once('../close.php');
+
+        // On renvoi vers la page de paiement
+        header('Location: paiement.php');
+
+    } else {
+        // Sinon on envoie un message d'erreur
+        $_SESSION['erreur'] = "Le formulaire est incomplet";
+        // On renvoi vers la page de livraison
+        header('Location: livraison.php');
+    }
+}

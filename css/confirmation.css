@@ -1,0 +1,149 @@
+@import url('../css/font.css');
+
+:root {
+    --bs-blue: #007bff;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #e83e8c;
+    --bs-red: #d9534f;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #f0ad4e;
+    --bs-green: #4bbf73;
+    --bs-teal: #20c997;
+    --bs-cyan: #1f9bcf;
+    --bs-white: #fff;
+    --bs-gray: #919aa1;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #1a1a1a;
+    --bs-secondary: #fff;
+    --bs-success: #4bbf73;
+    --bs-info: #1f9bcf;
+    --bs-warning: #f0ad4e;
+    --bs-danger: #d9534f;
+    --bs-light: #fff;
+    --bs-dark: #343a40;
+    --bs-font-sans-serif: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: var(--bs-font-sans-serif);
+    color: #55595c;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    width: 100%;
+}
+
+#logo {
+    width: 170px;
+}
+
+nav div {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav {
+    margin: auto;
+}
+
+nav div p {
+    font-size: 12px;
+    padding-left: 10px;
+    color: white;
+}
+
+progress {
+    background: green;
+    display: flex;
+    width: 600px;
+    height: 12px;
+}
+
+progress:after{
+    background-color: white;
+    content: '';
+    display: block;
+    width: 12%;
+    height: 100%;
+}
+
+main{
+    height: 502px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    margin: 1%;
+    padding: 1%;
+    border: 1px solid rgb(228, 225, 225);
+    height: 250px;
+    width: 1200px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+section p{
+    text-align: center;
+}
+
+section h1{
+    text-align: center;
+}
+
+section img {
+    width: 80px;
+    display: block;
+    margin: auto;
+}
+
+section div{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    box-shadow: 20px;
+    background: #4bbf73;
+    box-shadow: 0 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    width: 200px;
+}
+
+div a{
+    margin: 1%;
+}
+
+button:hover {
+    background: #409e61;
+}
+
+footer {
+    background: black;
+    padding: 0.5%;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
+
+footer a {
+    color: white;
+}

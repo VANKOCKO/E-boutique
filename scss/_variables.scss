@@ -1,0 +1,27 @@
+// Principales
+$bleu_navy-principal: #000080;
+$bleu-navy-secondaire: #3232da;
+
+// Utilitaires Couleurs
+$fond-clair: #fbfef9;
+$fond-alerte: #ff4242;
+$fond-neutre: #7284a8;
+$fond-succes: #3ab795;
+
+// Textes
+$txt-fond-clair: #12130F;
+$txt-fond-sombre: #fbfef9;
+
+// Utilitaires Position / Dimensions
+$radius-btn: 5px;
+$padding-txt: 10px;
+
+// breakpoints for media query
+$breakpoints: (
+    "phone-down": 500px,
+    "tablet-up": 768px,
+    "tablet-down": 900px,
+    "desktop-up": 1024px,
+    "desktop-down": 1280px,
+    "widescreen-up": 1440px
+);

@@ -1,0 +1,318 @@
+@import url('../css/font.css');
+
+:root {
+    --bs-blue: #007bff;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #e83e8c;
+    --bs-red: #d9534f;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #f0ad4e;
+    --bs-green: #4bbf73;
+    --bs-teal: #20c997;
+    --bs-cyan: #1f9bcf;
+    --bs-white: #fff;
+    --bs-gray: #919aa1;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #1a1a1a;
+    --bs-secondary: #fff;
+    --bs-success: #4bbf73;
+    --bs-info: #1f9bcf;
+    --bs-warning: #f0ad4e;
+    --bs-danger: #d9534f;
+    --bs-light: #fff;
+    --bs-dark: #343a40;
+    --bs-font-sans-serif: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: var(--bs-font-sans-serif);
+    color: #55595c;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    width: 100%;
+}
+
+#logo {
+    width: 170px;
+}
+
+nav div {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav {
+    margin: auto;
+}
+
+nav div p {
+    font-size: 12px;
+    padding-left: 10px;
+    color: white;
+}
+
+progress {
+    background-color: #4bbf73;
+    display: flex;
+    width: 600px;
+    height: 12px;
+}
+
+progress:after{
+    background-color: white;
+    content: '';
+    display: block;
+    width: 250%;
+    height: 100%;
+}
+
+#retour {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+#alert {
+    color: #82322f;
+    background-color: #f7dddc;
+    border-color: #f4cbca;
+    padding: 1rem 1rem;
+}
+
+ul {
+    margin-left: 30px;
+}
+
+#couleur-success {
+    color: #2d7345;
+    background-color: #dbf2e3;
+    border-color: #c9ecd5;
+    padding: 1rem 1rem;
+    margin: 1%;
+}
+
+#couleur-danger {
+    color: #82322f;
+    background-color: #f7dddc;
+    border-color: #f4cbca;
+    padding: 1rem 1rem;
+    margin: 1%;
+}
+
+#s1 {
+    display: flex;
+    align-items: center;
+    background-image: url('../img/seconnecter_font.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    margin-left: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#s2 {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+#ia {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1%;
+}
+
+.s {
+    align-items: center;
+    margin-left: 100px;
+    padding: 2%;
+    height: auto;
+    width: 60%;
+    margin-top: 0;
+}
+
+label{
+    font-size: 13px;
+    margin-bottom: 1%;
+}
+
+small{
+    font-size: 10px;
+}
+
+.ds {
+    font-size: 13px;
+}
+
+#mdp a {
+    color: #1F9BCF;
+    font-size: 13px;
+}
+
+#mdp{
+    margin-bottom: 20px;
+    margin-top: -5px;
+}
+
+#ci {
+    display: flex;
+    justify-content: center;
+}
+
+#ci a {
+    display: block;
+    margin: auto;
+    text-align: center;
+    border: 1px solid rgb(228, 225, 225);
+    text-decoration: none;
+    padding: 1rem 1rem;
+    margin: 2%;
+    margin-bottom: 1%;
+    margin-right: 0;
+    width: 150px;
+}
+
+#ci a:hover {
+    color: black !important;
+}
+
+h5 {
+    font-size: 15px;
+}
+
+h6 {
+    margin-bottom: 20px;
+}
+
+.d {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0.5rem;
+}
+
+#logout {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.s .i {
+    border: 0 solid #ced4da;
+    background-color: #f7f7f9;
+    padding: 0.75rem 1.5rem;
+    font-size: 13px;
+    outline-style: none;
+}
+
+.i:focus {
+    transition: border 0.01s;
+    box-shadow: 0 0 0 0.25rem rgb(26 26 26 / 25%);
+}
+
+.eye .i {
+    border: 0 solid #ced4da;
+    background-color: #f7f7f9;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5%;
+    width: 99%;
+    outline-style: none;
+}
+
+.eye .i:focus {
+    transition: border 0.01s;
+    box-shadow: 0 0 0 0.25rem rgb(26 26 26 / 25%);
+}
+
+.eye i {
+    margin-left: -40px;
+    cursor: pointer;
+}
+
+#check {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+#check input {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#cgu {
+    font-size: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+button {
+    font-family: inherit;
+    background: #4bbf73;
+    padding: 10px;
+    color: white;
+    border: none;
+    width: 200px;
+    margin-top: 1%;
+    font-size: 13px !important;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #409e61;
+    cursor: pointer;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+#font{
+    background-image: url('../img/prix.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 100px;
+    /* si nouveau  */
+    margin-bottom: 240px;
+}
+
+#totalttc {
+    padding-top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#totalttc strong {
+    color: #4bbf73;
+    font-size: 30px;
+}
+
+#totalttc p {
+    font-size: 20px;
+    text-transform: uppercase;
+}

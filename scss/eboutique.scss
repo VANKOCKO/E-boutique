@@ -1,0 +1,305 @@
+@import "_font.css";
+@import "_mixins";
+@import "_placeholders";
+@import "_variables";
+@import "header";
+@import "footer";
+
+:root {
+    --bs-blue: #007bff;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #e83e8c;
+    --bs-red: #d9534f;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #f0ad4e;
+    --bs-green: #4bbf73;
+    --bs-teal: #20c997;
+    --bs-cyan: #1f9bcf;
+    --bs-white: #fff;
+    --bs-gray: #919aa1;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #1a1a1a;
+    --bs-secondary: #fff;
+    --bs-success: #4bbf73;
+    --bs-info: #1f9bcf;
+    --bs-warning: #f0ad4e;
+    --bs-danger: #d9534f;
+    --bs-light: #fff;
+    --bs-dark: #343a40;
+    --bs-font-sans-serif: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: var(--bs-font-sans-serif);
+    color: #55595c;
+}
+
+header {
+    position: fixed;
+    z-index: auto;
+}
+
+#eboutique,
+#a2 {
+    color: white;
+}
+
+#d1 {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1%;
+    font-size: 15px;
+    h1 {
+        font-size: 25px;
+    }
+    select {
+        border: none;
+        background: #f7f7f9;
+        color: #55595c;
+        padding: 15px;
+        width: 250px;
+        margin-right: 1%;
+        outline-style: none;
+    }
+}
+
+select:focus {
+    transition: border 0.01s;
+    box-shadow: 0 0 0 0.25rem rgb(26 26 26 / 25%);
+}
+
+#s1 {
+    display: flex;
+    background-image: url('../img/eboutique_font.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    aside {
+        margin-top: 20px !important;
+        width: 20%;
+        border: 1px solid rgb(228, 225, 225);
+        height: 1000px;
+        font-size: 15px;
+        margin: 1%;
+        h3 {
+            padding: 0.5rem 1rem;
+            font-weight: 300;
+            font-size: 15px;
+            background-color: rgba(0, 0, 0, 0.03);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        }
+    }
+}
+
+.card {
+    padding: 4%;
+    font-family: 'Nunito Sans', sans-serif;
+    h6 {
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: #1a1a1a;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+    }
+    .vp {
+        color: #1a1a1a;
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: 400;
+    } 
+}
+
+#dminmax {
+    display: flex;
+    justify-content: center;
+    .minmax {
+        border: none;
+        height: 40px;
+        width: 100px;
+        font-family: inherit;
+        outline-style: none;
+        color: #55595c;
+        background: #f7f7f9;
+        padding-left: 10px;
+        margin: 1%;
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    .check {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        input[type=checkbox] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+        }
+        input[type=checkbox] {
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            margin-right: 0.5em;
+            width: 1em;
+            height: 1em;
+        }
+        input[type=checkbox]:checked{
+            background-image: url('../img/checkbox.png');
+            background-size: cover;
+            background-color: #1a1a1a;
+            border-color: #1a1a1a;
+        }
+        input[type=checkbox]:focus{
+            box-shadow: 0 0 0 0.25rem rgb(26 26 26 / 25%);
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 77%;
+    #s2 {
+        margin-top: 20px;
+        border: 1px solid rgb(228, 225, 225);
+        height: 200px;
+        width: 100%;
+    }
+}
+
+#ajtpanier {
+    padding: 10px;
+    border: none;
+    box-shadow: 20px;
+    background: #4bbf73;
+    color: white;
+    width: 200px;
+    #ajtpanier:hover {
+        background: #409e61;
+    }    
+}
+
+article {
+    display: flex;
+    #d3 {
+        display: flex;
+        height: 200px;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        #img_prod {
+            width: 15%;
+        }
+    }
+    #d4 {
+        width: 40%;
+        #first-child {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+    
+    #d5 {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            text-align: center;
+            color: #f0ad4e;
+        }
+    }
+}
+
+/* Range */
+
+.slidecontainer {
+    width: 100%;
+    /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    width: 100%;
+    /* Override default CSS styles */
+    appearance: none;
+    height: 5px;
+    /* Specified height */
+    background: #f7f7f9;
+    /* Grey background */
+    outline: none;
+    /* Mouse-over effects */
+    .slider:hover {
+        opacity: 1;
+        /* Fully shown on mouse-over */
+    }
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 15px;
+    /* Set a specific slider handle width */
+    height: 15px;
+    /* Slider handle height */
+    background: black;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+// @media screen and (min-width : 1024px) and (max-width: 1281px) {
+//     .btn-menu{
+//         display: none;
+//     }
+// }
+
+// /* iPads */
+// @media screen and (min-width : 768px) and (max-width : 1024px) {
+
+
+// }
+
+// /* Smartphones */
+// @media screen and (min-width : 320px) and (max-width : 480px) {
+//     header {
+//         display: flex;
+//         flex-direction: column;
+//     }
+
+//     nav {
+//         display: flex;
+//         flex-direction: column;
+//     }
+
+//     a {
+//         padding-left: 10px;
+//     }
+
+//     i {
+//         padding-bottom: -50px !important;
+//     }
+
+//     #searchbar {
+//         margin-left: 7px;
+//         margin-top: 30px;
+//         margin-bottom: 20px;
+//         width: 400px;
+//     }
+// }

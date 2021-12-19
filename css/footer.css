@@ -1,0 +1,18 @@
+footer {
+  background: black;
+  color: white;
+  font-size: 13px;
+  padding: 0.5%;
+  text-align: center;
+}
+footer a {
+  color: white;
+}
+
+/* Tablet + Smartphones*/
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+  footer {
+    padding: 15px;
+    font-size: 10px;
+  }
+}
