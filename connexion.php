@@ -2,7 +2,7 @@
 
 $servername = "localhost";
 $username = "root";
-$passeword = "";
+$passeword = "root";
 
 // on essaie de se connecter
 try {
