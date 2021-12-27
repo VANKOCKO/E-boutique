@@ -6,14 +6,7 @@ require('../connexion.php');
 //     $recherche = htmlspecialchars($_GET['s']);
 //     $allprod = $bdd->prepare('SELECT titre FROM produit WHERE titre LIKE "%' . $recherche . '%" ORDER BY id_produit DESC');
 // }
-if(isset($_POST['panier'])){
-    $panier = json_decode($_POST['panier']);
-    session_start();
-    $_SESSION['panier'] = $panier;
-    echo "<pre>";
-    var_dump($_SESSION['panier']);
-    echo "</pre>";
-}
+
 
 // Récupérer le produit dans la table des produits
 $sth = $bdd->prepare("SELECT * FROM produit");
@@ -46,6 +39,9 @@ $produits = $sth->fetchAll(PDO::FETCH_ASSOC);
     <title>Infozone</title>
 
 </head>
+<div id="test">
+    
+</div>
 
 <!-- Début de ma page Web -->
 
@@ -306,58 +302,11 @@ $produits = $sth->fetchAll(PDO::FETCH_ASSOC);
         <!--Fin aside-->
 
         <!--Contenu principal de ma page-->
-        <main>
-
-            <?php foreach ($produits as $produit) : ?>
-
-                <!-- Container principal en column-->
-                <section id=s2>
-
-                    <!--Différents contenus de même catégorie-->
-                    <div id="d2">
-
-                        <!--Début des articles-->
-                        <article>
-
-                            <div id="d3">
-
-                                <img id="img_prod" src="../admin/<?= $produit['image']; ?>" alt="imageproduit">
-
-                                <div id="d4">
-
-                                    <p id="first-child"><?= $produit['titre'] . " " . $produit['reference']; ?></p>
-
-                                    <p><?= $produit['description'] ?></p>
-
-                                </div>
-
-                                <div id="d5">
-                                                    <button class="ajtpanier" name="ajout_panier" type="submit">AJOUTER AU PANIER
-                                                           <input hidden class="imgproduit" name="img" value="./admin/<?= $produit['image']; ?>">
-                                                           <input hidden class="titreproduit" name="titreref" value="<?= $produit['titre'] . " " . $produit['reference']; ?>">
-                                                           <input hidden class="prixhtproduit" name="prix_ht" value="<?= $produit['prix_ht']; ?>">
-                                                           <input hidden class="prixttcproduit" name="prix_ttc" value="<?= $produit['prix_ttc']; ?>">
         
-                                                    </button>
-                                                    
-                                                   
-                                    <h2><?= $produit['prix_ttc'] ?><sup>99</sup></h2>
-
-                                </div>
-
-                            </div>
-
-                        </article>
-                        <!--Fin des articles-->
-
-                    </div> <!-- Fin de section-->
-
-                </section><!-- Fin de section-->
-
-            <?php endforeach; ?>
-
+        <main class="listproduit">
+          
         </main> <!-- Fin du contenu principal de la page -->
-
+      
     </section>
 
     <!--Début de mon bas de page-->
@@ -370,8 +319,8 @@ $produits = $sth->fetchAll(PDO::FETCH_ASSOC);
     </footer>
     <!--Fin de mon bas de page-->
     <script src="../js/jquery.js"></script>
-    <script src="../js/ajoutPanier.js"></script>
     <script src="../js/rechercheEboutique.js"></script>
+    <script src="../js/ajoutPanier.js"></script>
     <script>
         var slider = document.getElementById("myRange");
         var output = document.getElementById("demo");
