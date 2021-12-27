@@ -199,7 +199,7 @@ $produits = $sth->fetchAll(PDO::FETCH_ASSOC);
                 </div>
 
                 <div class="slidecontainer">
-                    <input type="range" min="0" max="1000" value="500" class="slider" id="myRange">
+                    <input type="range" min="0" max="1000" step="10" value="500" class="slider" id="myRange">
                     <p id="valeurRange"></p>
                 </div>
 
