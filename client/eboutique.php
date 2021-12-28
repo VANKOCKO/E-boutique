@@ -158,17 +158,17 @@ $produits = $sth->fetchAll(PDO::FETCH_ASSOC);
 
             <h3>Catégories</h3>
 
-            <div class="card">
+            <div class="card" id="listcategorie">
 
-                <h6>High-Tech</h6>
+                <h6><a href="#"><p>High-Tech<p></a></h6>
 
-                <h6>Toutes les marques</h6>
+                <h6><a href="#"><p>Toutes les marques</p></a></h6>
 
-                <h6>Ordinateurs & Accessoires</h6>
+                <h6><a href="#"><p>ORDINATEURS & ACCESSOIRES</p></a></h6>
 
-                <h6>Ecran & Moniteur</h6>
+                <h6><a href=""><p>Ecran & Moniteur</p></a></h6>
 
-                <h6>Imprimante</h6>
+                <h6><a href=""><p>Imprimante</p></a></h6>
 
                 <a class="vp" href="#">Voir plus</a>
 

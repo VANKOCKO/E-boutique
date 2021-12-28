@@ -1,10 +1,10 @@
 <?php
 require('../connexion.php');
-if(isset($_POST['recherchePrix']) ) {
-    $prix = $_POST['recherchePrix'];
-    $sth = $bdd->prepare("SELECT * FROM produit where prix_ttc like '%$prix%'");
+if(isset($_POST['rechercheCategorie']) ) {
+    $categorie = $_POST['rechercheCategorie'];
+    $sth = $bdd->prepare("SELECT id_categorie FROM categorie where lib_cat = $categorie ");
     $sth->execute();
-    $produits = $sth->fetchAll(PDO::FETCH_ASSOC); 
-    echo json_encode($produits);
+    $id_categorie = $sth->fetchAll(PDO::FETCH_ASSOC); 
+    echo ($produits);
 }
 ?>

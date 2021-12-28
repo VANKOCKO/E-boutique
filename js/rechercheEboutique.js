@@ -1,4 +1,5 @@
 $(function(){
+    // Affichage des produits de la db
     $.ajax({
              url : '../ajax/AfficheTousLesProduit.php',
              method : 'GET'
@@ -68,6 +69,7 @@ $(function(){
                     });
                 })
     })
+    // recherche sur les prix
     $("#myRange").change(function(){
          $("#valeurRange").text($(this).val())   
          $.ajax({
@@ -123,6 +125,20 @@ $(function(){
                   }
               }  
     })
+})
+
+$("#listcategorie > h6 > a ").on("click", function(){
+     console.log($(this).children("p").text())
+     $.ajax({
+             url : '../ajax/rechercheCategorie.php',
+             method : 'post',
+             data : {
+                     rechercheCategorie : $(this).children("p").text()
+             }
+         }).done(function(res){
+               console.log(res)
+              }  
+    )
 })
 
 
