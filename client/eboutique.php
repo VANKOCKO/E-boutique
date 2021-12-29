@@ -166,11 +166,11 @@ $produits = $sth->fetchAll(PDO::FETCH_ASSOC);
 
                 <h6><a href="#"><p>ORDINATEURS & ACCESSOIRES</p></a></h6>
 
-                <h6><a href=""><p>Ecran & Moniteur</p></a></h6>
+                <h6><a href="#"><p>Ecran & Moniteur</p></a></h6>
 
-                <h6><a href=""><p>Imprimante</p></a></h6>
+                <h6><a href="#"><p>Imprimante</p></a></h6>
 
-                <a class="vp" href="#">Voir plus</a>
+                <!--<a class="vp" href="#">Voir plus</a> -->
 
             </div>
 
@@ -207,36 +207,32 @@ $produits = $sth->fetchAll(PDO::FETCH_ASSOC);
 
             <h3>Marque</h3>
 
-            <div class="card">
+            <div class="card" id="listeDesMarques">
 
                 <div class="box">
                     <div class="check">
-                        <input class="input-check" type="checkbox" checked><label>Peu importe</label>
+                        <input class="input-check" type="checkbox" value="Peu importe" ><label>Peu importe</label>
                     </div>
                     <div class="check">
-                        <input class="input-check" type="checkbox">Apple
+                        <input class="input-check" type="checkbox" value="Apple"><label>Apple</label>
                     </div>
                     <div class="check">
-                        <input class="input-check" type="checkbox">Samsung
+                        <input class="input-check" type="checkbox" value="Samsung"><label>Samsung</label>
                     </div>
                     <div class="check">
-                        <input class="input-check" type="checkbox">Dell
+                        <input class="input-check" type="checkbox" value="Dell"><label>Dell</label>
                     </div>
                     <div class="check">
-                        <input class="input-check" type="checkbox">HP
-                    </div>
+                        <input class="input-check" type="checkbox" value="HP"><label>HP</label>                    </div>
                     <div class="check">
-                        <input class="input-check" type="checkbox">Lenovo
+                        <input class="input-check" type="checkbox" value="Lenovo"><label>Lenovo</label>
                     </div>
                 </div>
-
-                <a class="vp" href="#">Voir plus</a>
-
             </div>
 
             <h3>Modèle</h3>
 
-            <div class="card">
+            <div class="card" id="listeDesModels">
 
                 <div class="box">
 
@@ -272,7 +268,7 @@ $produits = $sth->fetchAll(PDO::FETCH_ASSOC);
 
             <h3>Aspect</h3>
 
-            <div class="card">
+            <div class="card" id="listeDesAspects">
 
                 <div class="box">
                     <div class="check">

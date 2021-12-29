@@ -1,4 +1,4 @@
-<?php
+<?php 
 require('../connexion.php');
 if(isset($_POST['rechercheCategorie']) ) {
     $categorie = $_POST['rechercheCategorie'];
