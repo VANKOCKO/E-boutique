@@ -13,6 +13,12 @@ $sth = $bdd->prepare("SELECT * FROM produit");
 $sth->execute();
 $produits = $sth->fetchAll(PDO::FETCH_ASSOC);
 
+// Récupérer le produit dans la table des produits
+$sth1 = $bdd->prepare("SELECT lib_cat FROM categorie");
+$sth1->execute();
+$categories = $sth1->fetchAll(PDO::FETCH_ASSOC);
+
+
 ?>
 
 
@@ -155,23 +161,15 @@ $produits = $sth->fetchAll(PDO::FETCH_ASSOC);
 
         <!-- Contenu se trouvant dans une barre latérale -->
         <aside>
-
             <h3>Catégories</h3>
-
-            <div class="card" id="listcategorie">
-
-                <h6><a href="#"><p>High-Tech<p></a></h6>
-
-                <h6><a href="#"><p>Toutes les marques</p></a></h6>
-
-                <h6><a href="#"><p>ORDINATEURS & ACCESSOIRES</p></a></h6>
-
-                <h6><a href="#"><p>Ecran & Moniteur</p></a></h6>
-
-                <h6><a href="#"><p>Imprimante</p></a></h6>
-
-                <!--<a class="vp" href="#">Voir plus</a> -->
-
+            <div class="card" id="listcategorieBis">
+                <div class="box">
+                    <?php foreach ($categories as $cat) : ?>
+                            <div class="check">
+                                <input type="checkbox" value="<?=$cat['lib_cat']?>"><?=$cat['lib_cat'] ?>
+                            </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
 
             <h3>Prix</h3>
@@ -210,9 +208,6 @@ $produits = $sth->fetchAll(PDO::FETCH_ASSOC);
             <div class="card" id="listeDesMarques">
 
                 <div class="box">
-                    <div class="check">
-                        <input class="input-check" type="checkbox" value="Peu importe" ><label>Peu importe</label>
-                    </div>
                     <div class="check">
                         <input class="input-check" type="checkbox" value="Apple"><label>Apple</label>
                     </div>
@@ -317,6 +312,7 @@ $produits = $sth->fetchAll(PDO::FETCH_ASSOC);
     <script src="../js/jquery.js"></script>
     <script src="../js/rechercheEboutique.js"></script>
     <script src="../js/ajoutPanier.js"></script>
+    <script  src="../js/rechercheMarqueModelAspect.js"></script>
     <script>
         var slider = document.getElementById("myRange");
         var output = document.getElementById("demo");

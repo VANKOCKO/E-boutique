@@ -1,6 +1,6 @@
 <?php 
 require('../connexion.php');
-if(isset($_POST['rechercheCategorie']) ) {
+if(isset($_POST['listesDesMarques']) ) {
     $categorie = $_POST['rechercheCategorie'];
     $sth = $bdd->prepare("SELECT id_categorie FROM categorie where lib_cat = '$categorie'");
     $sth->execute();
